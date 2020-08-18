@@ -1,0 +1,13 @@
+<nav class="navbar navbar-light bg-light">
+  <p><%= link_to "+ Add An Article", new_article_path %></p>
+</nav>
+
+<h1>Tasks</h1>
+
+<ul>
+  <% @articles.each do |article| %>
+  <li><%= link_to "#{article.title}", article_path(article.id) %> | <%= article.content %></li>
+  <% end %>
+</ul>
+
+
